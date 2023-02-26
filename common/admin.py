@@ -4,14 +4,15 @@ from .models import (
                         GalleryImage,
                         SectionText,
                         Activity,
-                        ContactUs
+                        ContactUs,
+                        HeroSliderItem
                     
                     )
 
 
 @admin.register(ContactUs)
 class AdminContactUs(admin.ModelAdmin):
-    list_display = ['name','email', 'subject']
+    list_display = ['name','mobile', 'subject']
 
 
 @admin.register(Activity)
@@ -32,3 +33,8 @@ class AdminGalleryImage(admin.ModelAdmin):
 @admin.register(FAQ)
 class AdminFAQ(admin.ModelAdmin):
     list_display = ['question']
+
+
+@admin.register(HeroSliderItem)
+class AdminHeroSliderItem(admin.ModelAdmin):
+    list_display = ['name']
