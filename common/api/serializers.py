@@ -1,4 +1,10 @@
-from common.models import FAQ, HeroSliderItem, Activity, ContactUs
+from common.models import (
+    FAQ, 
+    HeroSliderItem, 
+    Activity, 
+    ContactUs,
+    Room
+    )
 from rest_framework import serializers
 
 
@@ -35,4 +41,13 @@ class ContactUsSerializer(serializers.ModelSerializer):
     """
     class Meta:
         model = ContactUs
+        fields = "__all__"
+
+
+class RoomSerializer(serializers.ModelSerializer):
+    """
+    Room model serializer
+    """
+    class Meta:
+        model = Room
         fields = "__all__"

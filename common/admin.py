@@ -5,7 +5,8 @@ from .models import (
                         SectionText,
                         Activity,
                         ContactUs,
-                        HeroSliderItem
+                        HeroSliderItem,
+                        Room
                     
                     )
 
@@ -38,3 +39,8 @@ class AdminFAQ(admin.ModelAdmin):
 @admin.register(HeroSliderItem)
 class AdminHeroSliderItem(admin.ModelAdmin):
     list_display = ['name']
+
+
+@admin.register(Room)
+class AdminRoom(admin.ModelAdmin):
+    list_display = ['title', 'booking_link']

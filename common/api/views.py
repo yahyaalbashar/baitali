@@ -2,20 +2,22 @@ from datetime import datetime
 from rest_framework.generics import (
     ListAPIView, 
     RetrieveAPIView,
-    CreateAPIView
+    CreateAPIView,
     )
 
 from common.models import (
     FAQ, 
     HeroSliderItem, 
     Activity,
-    ContactUs
+    ContactUs,
+    Room
     )
 from common.api.serializers import (
     FAQSerializer, 
     HeroSliderItemSerializer, 
     ActivitySerializer,
-    ContactUsSerializer
+    ContactUsSerializer,
+    RoomSerializer
     )
 
 
@@ -42,3 +44,13 @@ class RetrieveActivityAPIView(RetrieveAPIView):
 class CreateContactUsAPIView(CreateAPIView):
     queryset = ContactUs.objects.all()
     serializer_class = ContactUsSerializer
+
+
+class ListRoomsAPIView(ListAPIView):
+    queryset = Room.objects.all()
+    serializer_class = RoomSerializer
+
+
+class RetrieveRoomAPIView(RetrieveAPIView):
+    queryset = Room.objects.all()
+    serializer_class = RoomSerializer

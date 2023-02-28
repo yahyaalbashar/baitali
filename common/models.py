@@ -53,3 +53,13 @@ class HeroSliderItem(models.Model):
 
     def __str__(self):
         return self.name
+
+
+class Room(models.Model):
+    title = models.CharField(max_length=255)
+    description = models.TextField()
+    booking_link = models.URLField()
+    images = models.ManyToManyField(GalleryImage)
+
+    def __str__(self):
+        return self.title
