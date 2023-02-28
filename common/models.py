@@ -63,3 +63,12 @@ class Room(models.Model):
 
     def __str__(self):
         return self.title
+
+
+class Facility(models.Model):
+    title = models.CharField(max_length=255)
+    description = models.TextField()
+    icon = models.CharField(max_length=255)
+
+    def __str__(self):
+        return self.title

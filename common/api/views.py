@@ -10,14 +10,16 @@ from common.models import (
     HeroSliderItem, 
     Activity,
     ContactUs,
-    Room
+    Room,
+    Facility
     )
 from common.api.serializers import (
     FAQSerializer, 
     HeroSliderItemSerializer, 
     ActivitySerializer,
     ContactUsSerializer,
-    RoomSerializer
+    RoomSerializer,
+    FacilitySerializer
     )
 
 
@@ -54,3 +56,8 @@ class ListRoomsAPIView(ListAPIView):
 class RetrieveRoomAPIView(RetrieveAPIView):
     queryset = Room.objects.all()
     serializer_class = RoomSerializer
+
+
+class ListFacilityAPIView(ListAPIView):
+    queryset = Facility.objects.all()
+    serializer_class = FacilitySerializer

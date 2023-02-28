@@ -3,7 +3,8 @@ from common.models import (
     HeroSliderItem, 
     Activity, 
     ContactUs,
-    Room
+    Room,
+    Facility
     )
 from rest_framework import serializers
 
@@ -50,4 +51,13 @@ class RoomSerializer(serializers.ModelSerializer):
     """
     class Meta:
         model = Room
+        fields = "__all__"
+
+
+class FacilitySerializer(serializers.ModelSerializer):
+    """
+    Facility model serializer
+    """
+    class Meta:
+        model = Facility
         fields = "__all__"
