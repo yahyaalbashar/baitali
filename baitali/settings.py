@@ -134,3 +134,9 @@ MEDIA_URL = '/media/'
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 CORS_ORIGIN_ALLOW_ALL = True
+CORS_ALLOWED_ORIGINS = [
+    "www.bait-ali.com",
+    "bait-ali.com",
+    "http://127.0.0.1:3000",
+    "http://localhost:3000",
+]
