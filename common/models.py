@@ -39,7 +39,7 @@ class Activity(models.Model):
 
 class ContactUs(models.Model):
     name = models.CharField(max_length=255)
-    mobile = models.CharField(max_length=255, null=True, blank=True)
+    email = models.CharField(max_length=255, null=True, blank=True)
     subject = models.CharField(max_length=255)
     message = models.TextField()
 

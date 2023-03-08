@@ -7,6 +7,7 @@ from common.api.views import (
     ListActivitiesAPIView,
     ListRoomsAPIView,
     ListFacilityAPIView,
+    ListGalleryImages,
 
     #Retrieve views
     RetrieveActivityAPIView,
@@ -26,7 +27,7 @@ urlpatterns = [
     path('api/list-rooms', ListRoomsAPIView.as_view(), name="list_rooms"),
     path('api/get-room', RetrieveRoomAPIView.as_view(), name="get_room"),
     path('api/list-facilities', ListFacilityAPIView.as_view(), name="list_facilities"),
-
+    path('api/list-gallery-images', ListGalleryImages.as_view(), name="list_gallery_images"),
 
 
 ]

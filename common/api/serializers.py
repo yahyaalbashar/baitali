@@ -4,7 +4,8 @@ from common.models import (
     Activity, 
     ContactUs,
     Room,
-    Facility
+    Facility,
+    GalleryImage
     )
 from rest_framework import serializers
 
@@ -60,4 +61,13 @@ class FacilitySerializer(serializers.ModelSerializer):
     """
     class Meta:
         model = Facility
+        fields = "__all__"
+
+
+class GalleryImageSerializer(serializers.ModelSerializer):
+    """
+    GalleryImage model serializer
+    """
+    class Meta:
+        model = GalleryImage
         fields = "__all__"

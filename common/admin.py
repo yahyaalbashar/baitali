@@ -14,7 +14,7 @@ from .models import (
 
 @admin.register(ContactUs)
 class AdminContactUs(admin.ModelAdmin):
-    list_display = ['name','mobile', 'subject']
+    list_display = ['name','email', 'subject']
 
 
 @admin.register(Activity)
