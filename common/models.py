@@ -69,6 +69,7 @@ class Facility(models.Model):
     title = models.CharField(max_length=255)
     description = models.TextField()
     icon = models.CharField(max_length=255)
+    image = models.ImageField(null=True, blank=True, upload_to='media/')
 
     def __str__(self):
         return self.title
