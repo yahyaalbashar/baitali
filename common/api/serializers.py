@@ -80,7 +80,7 @@ class FacilityGalleryImageSerializer(serializers.ModelSerializer):
     """
     class Meta:
         model = FacilityGalleryImage
-        fields = "__all__"
+        fields = ["id", "title", "description", "image"]
         depth = 1
 
 
