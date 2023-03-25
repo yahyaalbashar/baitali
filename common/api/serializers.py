@@ -26,7 +26,7 @@ class HeroSliderItemSerializer(serializers.ModelSerializer):
     """
     class Meta:
         model = HeroSliderItem
-        fields = ["name", "image"]
+        fields = ["name", "image", "description"]
 
 
 class ActivitySerializer(serializers.ModelSerializer):
