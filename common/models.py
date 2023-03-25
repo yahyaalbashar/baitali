@@ -50,6 +50,7 @@ class ContactUs(models.Model):
 class HeroSliderItem(models.Model):
     name = models.CharField(max_length=255)
     image = models.ImageField(upload_to='media/')
+    description = models.TextField(default="description")
 
     def __str__(self):
         return self.name
