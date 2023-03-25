@@ -5,7 +5,8 @@ from common.models import (
     ContactUs,
     Room,
     Facility,
-    GalleryImage
+    GalleryImage,
+    FacilityGalleryImage
     )
 from rest_framework import serializers
 
@@ -71,3 +72,22 @@ class GalleryImageSerializer(serializers.ModelSerializer):
     class Meta:
         model = GalleryImage
         fields = "__all__"
+
+
+class FacilityGalleryImageSerializer(serializers.ModelSerializer):
+    """
+    FacilityGalleryImage model serializer
+    """
+    class Meta:
+        model = FacilityGalleryImage
+        fields = "__all__"
+        depth = 1
+
+
+class FacilityDetailSerializer(serializers.ModelSerializer):
+    facilitygalleryimage_set = FacilityGalleryImageSerializer(many=True)
+
+
+    class  Meta:
+        model = Facility
+        fields = ["id", "facilitygalleryimage_set", "title", "image", "description", "icon"]

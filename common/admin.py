@@ -7,7 +7,8 @@ from .models import (
                         ContactUs,
                         HeroSliderItem,
                         Room,
-                        Facility
+                        Facility,
+                        FacilityGalleryImage
                     
                     )
 
@@ -50,3 +51,8 @@ class AdminRoom(admin.ModelAdmin):
 @admin.register(Facility)
 class AdminFacility(admin.ModelAdmin):
     list_display = ['title']
+
+
+@admin.register(FacilityGalleryImage)
+class AdminFacilityGalleryImage(admin.ModelAdmin):
+    list_display = ["title", "facility"]

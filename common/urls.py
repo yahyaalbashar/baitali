@@ -12,6 +12,7 @@ from common.api.views import (
     #Retrieve views
     RetrieveActivityAPIView,
     RetrieveRoomAPIView,
+    RetrieveFacilityDetailAPIView,
 
     #Create Views
     CreateContactUsAPIView
@@ -28,6 +29,6 @@ urlpatterns = [
     path('api/get-room', RetrieveRoomAPIView.as_view(), name="get_room"),
     path('api/list-facilities', ListFacilityAPIView.as_view(), name="list_facilities"),
     path('api/list-gallery-images', ListGalleryImages.as_view(), name="list_gallery_images"),
-
+    path('api/facility-details/<int:pk>', RetrieveFacilityDetailAPIView.as_view(), name="facility_details"),
 
 ]

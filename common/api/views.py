@@ -21,7 +21,8 @@ from common.api.serializers import (
     ContactUsSerializer,
     RoomSerializer,
     FacilitySerializer,
-    GalleryImageSerializer
+    GalleryImageSerializer,
+    FacilityDetailSerializer
     )
 
 
@@ -68,3 +69,8 @@ class ListFacilityAPIView(ListAPIView):
 class ListGalleryImages(ListAPIView):
     queryset = GalleryImage.objects.all()
     serializer_class = GalleryImageSerializer
+
+
+class RetrieveFacilityDetailAPIView(RetrieveAPIView):
+    queryset = Facility.objects.all()
+    serializer_class = FacilityDetailSerializer
